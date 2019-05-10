@@ -18,3 +18,9 @@ print(list2)
 list3 = [1]
 print(list1 + list3)
 print(list1)
+
+
+# list截取到倒数第一个
+print(list1[:-1])
+# list截取到倒数第二个，不包含第二个
+print(list1[:-2])
