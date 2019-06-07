@@ -15,6 +15,7 @@ for i in range(0, len_log(list1)):
 # 2
 # 3
 # 4
+# range是个迭代器
 # 看来只调用了一次， 我们现在换while试一下
 
 i = 0
