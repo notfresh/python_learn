@@ -1,0 +1,7 @@
+1. 在当前用户目录下创建 .pip 文件夹.
+2. 进入 .pip 文件夹并且创建 pip.conf 文件, 添加一下内容
+
+[global]
+timeout=6000
+index-url=https://mirrors.aliyun.com/pypi/simple/
+trusted-host=mirros.aliyun.com

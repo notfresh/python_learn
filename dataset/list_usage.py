@@ -33,3 +33,14 @@ list2 = [[2,3], [4,5]]
 # 如何给list2的每个元素都加上list1的元素
 list2 = [list1 + item for item in list2]
 print(list2)
+
+
+# list当栈用
+print("*"*100)
+ls = [1, 2, 3, 4]
+print(ls.pop())
+print(ls.pop())
+print(ls)
+print(ls.pop())
+print(ls.pop())
+print(ls)

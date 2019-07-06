@@ -17,3 +17,4 @@ print(10/3)
 # 求余数
 print(5%2)
 
+print(chr(ord('A')+1))

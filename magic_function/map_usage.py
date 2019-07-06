@@ -8,6 +8,8 @@ def f1(x):
 
 list1 = [1, 2, 3, 4]
 list2 = map(f1, list1) # map不改变原有参数
+print(type(list2))
+print(list(list2))
 print(list1) # [1, 2, 3, 4]
 print(list2) # [1, 4, 9, 16]
 

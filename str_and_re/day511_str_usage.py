@@ -34,3 +34,9 @@ a = '12345'
 a_list = list(a)
 a_list[1] = '9'
 print(''.join(a_list))
+
+
+# 字符串分割
+str1 = 'world'
+print(str1[-10:])
+print(str1[10:])
