@@ -18,3 +18,10 @@ print('*'*100)
 d1 = ['*'] * 10
 print(d1)
 
+print('*'*100)
+print("测试[]的默认值设置")
+a = {}
+# print(a['b', 1])
+print(a.get('b', 1))
+print(a.get('b'))
+
