@@ -10,9 +10,11 @@ for i in dict1.items():
 # 默认值使用, setdefault
 # test
 print('*'*100)
-d = {}
-d[1] = d.setdefault(1, 0) + 1
+d = {1:2}
+d.setdefault(1, 0)
+# d[1] = d.setdefault(1, 0) + 1
 print(d)
+
 
 print('*'*100)
 d1 = ['*'] * 10

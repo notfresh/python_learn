@@ -44,3 +44,16 @@ print(ls)
 print(ls.pop())
 print(ls.pop())
 print(ls)
+
+print("*"*100)
+ls = [1, 2, 3, 1]
+del ls[-1]
+print(ls)
+
+# 头插法
+ls = [1, 2 ,3, 4]
+ls2 = []
+for i in ls:
+    ls2.insert(0, i)
+print(ls2)
+
