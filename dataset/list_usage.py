@@ -57,3 +57,7 @@ for i in ls:
     ls2.insert(0, i)
 print(ls2)
 
+
+# 头插法
+ls = [1, 2 ,3, 4]
+print(ls.pop())
