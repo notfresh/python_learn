@@ -16,3 +16,6 @@ ls.sort(reverse=True)
 ls.sort(key=len, reverse=True)
 print(ls)
 
+ls = [None, 1, 2]
+ls.sort()  # 有None会直接报错. 
+print(ls)
