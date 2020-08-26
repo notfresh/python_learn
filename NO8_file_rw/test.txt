@@ -1,0 +1,267 @@
+001/*
+002 * Licensed to the Apache Software Foundation (ASF) under one or more
+003 * contributor license agreements.  See the NOTICE file distributed with
+004 * this work for additional information regarding copyright ownership.
+005 * The ASF licenses this file to You under the Apache License, Version 2.0
+006 * (the "License"); you may not use this file except in compliance with
+007 * the License.  You may obtain a copy of the License at
+008 *
+009 *     http://www.apache.org/licenses/LICENSE-2.0
+010 *
+011 * Unless required by applicable law or agreed to in writing, software
+012 * distributed under the License is distributed on an "AS IS" BASIS,
+013 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+014 * See the License for the specific language governing permissions and
+015 * limitations under the License.
+016 */
+017package org.apache.lucene.demo;
+018
+019
+020import java.io.BufferedReader;
+021import java.io.IOException;
+022import java.io.InputStream;
+023import java.io.InputStreamReader;
+024import java.nio.charset.StandardCharsets;
+025import java.nio.file.FileVisitResult;
+026import java.nio.file.Files;
+027import java.nio.file.Path;
+028import java.nio.file.Paths;
+029import java.nio.file.SimpleFileVisitor;
+030import java.nio.file.attribute.BasicFileAttributes;
+031import java.util.Date;
+032
+033import org.apache.lucene.analysis.Analyzer;
+034import org.apache.lucene.analysis.standard.StandardAnalyzer;
+035import org.apache.lucene.document.LongPoint;
+036import org.apache.lucene.document.Document;
+037import org.apache.lucene.document.Field;
+038import org.apache.lucene.document.StringField;
+039import org.apache.lucene.document.TextField;
+040import org.apache.lucene.index.IndexWriter;
+041import org.apache.lucene.index.IndexWriterConfig.OpenMode;
+042import org.apache.lucene.index.IndexWriterConfig;
+043import org.apache.lucene.index.Term;
+044import org.apache.lucene.store.Directory;
+045import org.apache.lucene.store.FSDirectory;
+046
+047/** Index all text files under a directory.
+048 * <p>
+049 * This is a command-line application demonstrating simple Lucene indexing.
+050 * Run it with no command-line arguments for usage information.
+051 */
+052public class IndexFiles {
+053  
+054  private IndexFiles() {}
+055
+056  /** Index all text files under a directory. */
+057  public static void main(String[] args) {
+058    String usage = "java org.apache.lucene.demo.IndexFiles"
+059                 + " [-index INDEX_PATH] [-docs DOCS_PATH] [-update]\n\n"
+060                 + "This indexes the documents in DOCS_PATH, creating a Lucene index"
+061                 + "in INDEX_PATH that can be searched with SearchFiles";
+062    String indexPath = "index";
+063    String docsPath = null;
+064    boolean create = true;
+065    for(int i=0;i<args.length;i++) {
+066      if ("-index".equals(args[i])) {
+067        indexPath = args[i+1];
+068        i++;
+069      } else if ("-docs".equals(args[i])) {
+070        docsPath = args[i+1];
+071        i++;
+072      } else if ("-update".equals(args[i])) {
+073        create = false;
+074      }
+075    }
+076
+077    if (docsPath == null) {
+078      System.err.println("Usage: " + usage);
+079      System.exit(1);
+080    }
+081
+082    final Path docDir = Paths.get(docsPath);
+083    if (!Files.isReadable(docDir)) {
+084      System.out.println("Document directory '" +docDir.toAbsolutePath()+ "' does not exist or is not readable, please check the path");
+085      System.exit(1);
+086    }
+087    
+088    Date start = new Date();
+089    try {
+090      System.out.println("Indexing to directory '" + indexPath + "'...");
+091
+092      Directory dir = FSDirectory.open(Paths.get(indexPath));
+093      Analyzer analyzer = new StandardAnalyzer();
+094      IndexWriterConfig iwc = new IndexWriterConfig(analyzer);
+095
+096      if (create) {
+097        // Create a new index in the directory, removing any
+098        // previously indexed documents:
+099        iwc.setOpenMode(OpenMode.CREATE);
+100      } else {
+101        // Add new documents to an existing index:
+102        iwc.setOpenMode(OpenMode.CREATE_OR_APPEND);
+103      }
+104
+105      // Optional: for better indexing performance, if you
+106      // are indexing many documents, increase the RAM
+107      // buffer.  But if you do this, increase the max heap
+108      // size to the JVM (eg add -Xmx512m or -Xmx1g):
+109      //
+110      // iwc.setRAMBufferSizeMB(256.0);
+111
+112      IndexWriter writer = new IndexWriter(dir, iwc);
+113      indexDocs(writer, docDir);
+114
+115      // NOTE: if you want to maximize search performance,
+116      // you can optionally call forceMerge here.  This can be
+117      // a terribly costly operation, so generally it's only
+118      // worth it when your index is relatively static (ie
+119      // you're done adding documents to it):
+120      //
+121      // writer.forceMerge(1);
+122
+123      writer.close();
+124
+125      Date end = new Date();
+126      System.out.println(end.getTime() - start.getTime() + " total milliseconds");
+127
+128    } catch (IOException e) {
+129      System.out.println(" caught a " + e.getClass() +
+130       "\n with message: " + e.getMessage());
+131    }
+132  }
+133
+134  /**
+135   * Indexes the given file using the given writer, or if a directory is given,
+136   * recurses over files and directories found under the given directory.
+137   * 
+138   * NOTE: This method indexes one document per input file.  This is slow.  For good
+139   * throughput, put multiple documents into your input file(s).  An example of this is
+140   * in the benchmark module, which can create "line doc" files, one document per line,
+141   * using the
+142   * <a href="../../../../../contrib-benchmark/org/apache/lucene/benchmark/byTask/tasks/WriteLineDocTask.html"
+143   * >WriteLineDocTask</a>.
+144   *  
+145   * @param writer Writer to the index where the given file/dir info will be stored
+146   * @param path The file to index, or the directory to recurse into to find files to index
+147   * @throws IOException If there is a low-level I/O error
+148   */
+149  static void indexDocs(final IndexWriter writer, Path path) throws IOException {
+150    if (Files.isDirectory(path)) {
+151      Files.walkFileTree(path, new SimpleFileVisitor<Path>() {
+152        @Override
+153        public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+154          try {
+155            indexDoc(writer, file, attrs.lastModifiedTime().toMillis());
+156          } catch (IOException ignore) {
+157            // don't index files that can't be read.
+158          }
+159          return FileVisitResult.CONTINUE;
+160        }
+161      });
+162    } else {
+163      indexDoc(writer, path, Files.getLastModifiedTime(path).toMillis());
+164    }
+165  }
+166
+167  /** Indexes a single document */
+168  static void indexDoc(IndexWriter writer, Path file, long lastModified) throws IOException {
+169    try (InputStream stream = Files.newInputStream(file)) {
+170      // make a new, empty document
+171      Document doc = new Document();
+172      
+173      // Add the path of the file as a field named "path".  Use a
+174      // field that is indexed (i.e. searchable), but don't tokenize 
+175      // the field into separate words and don't index term frequency
+176      // or positional information:
+177      Field pathField = new StringField("path", file.toString(), Field.Store.YES);
+178      doc.add(pathField);
+179      
+180      // Add the last modified date of the file a field named "modified".
+181      // Use a LongPoint that is indexed (i.e. efficiently filterable with
+182      // PointRangeQuery).  This indexes to milli-second resolution, which
+183      // is often too fine.  You could instead create a number based on
+184      // year/month/day/hour/minutes/seconds, down the resolution you require.
+185      // For example the long value 2011021714 would mean
+186      // February 17, 2011, 2-3 PM.
+187      doc.add(new LongPoint("modified", lastModified));
+188      
+189      // Add the contents of the file to a field named "contents".  Specify a Reader,
+190      // so that the text of the file is tokenized and indexed, but not stored.
+191      // Note that FileReader expects the file to be in UTF-8 encoding.
+192      // If that's not the case searching for special characters will fail.
+193      doc.add(new TextField("contents", new BufferedReader(new InputStreamReader(stream, StandardCharsets.UTF_8))));
+194      
+195      if (writer.getConfig().getOpenMode() == OpenMode.CREATE) {
+196        // New index, so we just add the document (no old document can be there):
+197        System.out.println("adding " + file);
+198        writer.addDocument(doc);
+199      } else {
+200        // Existing index (an old copy of this document may have been indexed) so 
+201        // we use updateDocument instead to replace the old one matching the exact 
+202        // path, if present:
+203        System.out.println("updating " + file);
+204        writer.updateDocument(new Term("path", file.toString()), doc);
+205      }
+206    }
+207  }
+208}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

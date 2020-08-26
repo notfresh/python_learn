@@ -1,0 +1,95 @@
+[滑动窗口](#滑动窗口)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[目录](#目录)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[滑动窗口 leet239 滑动窗口最大值](#滑动窗口-leet239-滑动窗口最大值)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[滑动窗口之异位词 leet438](#滑动窗口之异位词-leet438)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[滑动窗口之无重复的最长子串](#滑动窗口之无重复的最长子串)<br/>
+[链表](#链表)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[目录](#目录)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[list 链表 python ](#list-链表-python-)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[链表的排序和合并 leet148](#链表的排序和合并-leet148)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[leet234 回文链表的判断](#leet234-回文链表的判断)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[基于数组的回文的数量统计](#基于数组的回文的数量统计)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[LRUCache](#LRUCache)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[146. LRU缓存机制](https://leetcode-cn.com/problems/lru-cache/)](#[146-LRU缓存机制](https://leetcode-cncom/problems/lru-cache/))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[25. K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/)](#[25-K-个一组翻转链表](https://leetcode-cncom/problems/reverse-nodes-in-k-group/))<br/>
+[栈的问题](#栈的问题)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[leet42 小顶栈存水问题](#leet42-小顶栈存水问题)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[leet55 跳跃游戏](#leet55-跳跃游戏)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[leet32 最长的包含有效括号的子串的长度](#leet32-最长的包含有效括号的子串的长度)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[除自身以外数组的乘积](https://leetcode-cn.com/problems/product-of-array-except-self/) 奇思妙想 ](#[除自身以外数组的乘积](https://leetcode-cncom/problems/product-of-array-except-self/)-奇思妙想-)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[哈夫曼编码问题](#哈夫曼编码问题)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[螺旋数组](#螺旋数组)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[4. 寻找两个有序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)](#[4-寻找两个有序数组的中位数](https://leetcode-cncom/problems/median-of-two-sorted-arrays/))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[树的中序遍历](#树的中序遍历)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[leet53 最大子数组和](#leet53-最大子数组和)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[53. 最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)](#[53-最大子序和](https://leetcode-cncom/problems/maximum-subarray/))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[快排子排序应用来移动0](#快排子排序应用来移动0)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[重复数](#重复数)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[287. 寻找重复数](https://leetcode-cn.com/problems/find-the-duplicate-number/)](#[287-寻找重复数](https://leetcode-cncom/problems/find-the-duplicate-number/))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[leet48 缺失的值](#leet48-缺失的值)<br/>
+[位运算](#位运算)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[leet136 唯一出现的数字](#leet136-唯一出现的数字)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ 唯一出现的两个数](#-唯一出现的两个数)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[两个数字相加的位运算](#两个数字相加的位运算)<br/>
+[栈](#栈)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[最小栈-用一个栈实现的](#最小栈-用一个栈实现的)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[带*号的栈](#带*号的栈)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[字符串解压](#字符串解压)<br/>
+[其他](#其他)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[区间合并 leet56](#区间合并-leet56)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[删除节点O(1) 给定头结点和一个指定的结点，要删除这个指定的结点](#删除节点O(1)-给定头结点和一个指定的结点，要删除这个指定的结点)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[全排列](#全排列)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[接雨水 leet42](#接雨水-leet42)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[打印n位数 剑指offer12](#打印n位数-剑指offer12)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[字节跳动周赛](#字节跳动周赛)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1417. 重新格式化字符串](#1417-重新格式化字符串)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[字节跳动周赛 排列菜单](#字节跳动周赛-排列菜单)<br/>
+[动态规划](#动态规划)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[最长递增子序列 递增序列 leet300](#最长递增子序列-递增序列-leet300)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[300. 最长上升子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)](#[300-最长上升子序列](https://leetcode-cncom/problems/longest-increasing-subsequence/))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[摇筛子(骰子)结果统计](#摇筛子(骰子)结果统计)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[动态规划方法](#动态规划方法)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[牛妹的礼物](#牛妹的礼物)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[leetcode416 等和子集](#leetcode416-等和子集)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[416. 分割等和子集](https://leetcode-cn.com/problems/partition-equal-subset-sum/)](#[416-分割等和子集](https://leetcode-cncom/problems/partition-equal-subset-sum/))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[打家劫舍最简单的版本](#打家劫舍最简单的版本)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[更简介的递归](#更简介的递归)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[动态规划](#动态规划)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ 打家劫舍2 环形](#-打家劫舍2-环形)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[买股票系列 允许一次交易 ](#买股票系列-允许一次交易-)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[股票交易，含1天冷冻期](#股票交易，含1天冷冻期)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[309. 最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)](#[309-最佳买卖股票时机含冷冻期](https://leetcode-cncom/problems/best-time-to-buy-and-sell-stock-with-cooldown/))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[定符号 leet494](#定符号-leet494)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[leet322 零钱兑换](#leet322-零钱兑换)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[莱文斯坦编辑距离](#莱文斯坦编辑距离)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[最长公共序列 leet1143](#最长公共序列-leet1143)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[338. 比特位计数](https://leetcode-cn.com/problems/counting-bits/)](#[338-比特位计数](https://leetcode-cncom/problems/counting-bits/))<br/>
+[树](#树)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[平衡树](#平衡树)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[树的直径](#树的直径)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[leet617 树的合并](#leet617-树的合并)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[617. 合并二叉树](https://leetcode-cn.com/problems/merge-two-binary-trees/)](#[617-合并二叉树](https://leetcode-cncom/problems/merge-two-binary-trees/))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[从树的中序遍历、前序遍历重新构建树](#从树的中序遍历、前序遍历重新构建树)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[树的翻转](#树的翻转)<br/>
+[排序](#排序)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[旋转数组的排序 leet153, 支持重复数字](#旋转数组的排序-leet153,-支持重复数字)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[153. 寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)](#[153-寻找旋转排序数组中的最小值](https://leetcode-cncom/problems/find-minimum-in-rotated-sorted-array/))<br/>
+[递归](#递归)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[如何把全局变量变成局部变量](#如何把全局变量变成局部变量)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[leet394 字符串解码](#leet394-字符串解码)<br/>
+[双指针](#双指针)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3sum leet15](#3sum-leet15)<br/>
+[字符串](#字符串)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[异位词分组 leet49](#异位词分组-leet49)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[49. 字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/)](#[49-字母异位词分组](https://leetcode-cncom/problems/group-anagrams/))<br/>
+[ 括号匹配](#-括号匹配)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[leet301 本机能通过，网页单例测试通过，提交无法通过 leetcode cn](#leet301-本机能通过，网页单例测试通过，提交无法通过-leetcode-cn)<br/>
+[子数组](#子数组)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[leet560 连续子数组的和](#leet560-连续子数组的和)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[560. 和为K的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k/)](#[560-和为K的子数组](https://leetcode-cncom/problems/subarray-sum-equals-k/))<br/>
+[图](#图)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[ BFS](#-BFS)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)](#[200-岛屿数量](https://leetcode-cncom/problems/number-of-islands/))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[DAG的检测 leet207](#DAG的检测-leet207)<br/>
+[矩阵](#矩阵)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[leetcode48 leet48](#leetcode48-leet48)<br/>

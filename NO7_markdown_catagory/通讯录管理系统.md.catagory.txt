@@ -1,0 +1,29 @@
+[通讯录管理系统](#通讯录管理系统)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[1、系统需求](#1、系统需求)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[2、创建项目](#2、创建项目)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.1 创建项目](#21-创建项目)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.2添加文件](#22添加文件)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[3、菜单功能](#3、菜单功能)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[4、退出功能](#4、退出功能)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[5、添加联系人](#5、添加联系人)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[5.1 设计联系人结构体](#51-设计联系人结构体)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[5.2 设计通讯录结构体](#52-设计通讯录结构体)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[5.3 main函数中创建通讯录](#53-main函数中创建通讯录)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[5.4 封装添加联系人函数](#54-封装添加联系人函数)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[5.5 测试添加联系人功能](#55-测试添加联系人功能)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[6、显示联系人](#6、显示联系人)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[6.1 封装显示联系人函数](#61-封装显示联系人函数)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[6.2 测试显示联系人功能](#62-测试显示联系人功能)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[7、删除联系人](#7、删除联系人)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[7.1  封装检测联系人是否存在](#71--封装检测联系人是否存在)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[7.2 封装删除联系人函数](#72-封装删除联系人函数)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[7.3 测试删除联系人功能](#73-测试删除联系人功能)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[8、查找联系人](#8、查找联系人)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[8.1 封装查找联系人函数](#81-封装查找联系人函数)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[8.2 测试查找指定联系人](#82-测试查找指定联系人)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[9、修改联系人](#9、修改联系人)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[9.1 封装修改联系人函数](#91-封装修改联系人函数)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[9.2 测试修改联系人功能](#92-测试修改联系人功能)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;[10、清空联系人](#10、清空联系人)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[10.1 封装清空联系人函数](#101-封装清空联系人函数)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[10.2  测试清空联系人](#102--测试清空联系人)<br/>

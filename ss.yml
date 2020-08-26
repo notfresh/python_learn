@@ -1,0 +1,4 @@
+host:
+  ip00: 10.0.0.1
+  ip01: {one: 10.0.0.2, two: 10.0.0.3}
+sort: {apache: 2.2, mysql: 5.7, php: 5.3}
