@@ -4,7 +4,7 @@ import json
 if __name__ == '__main__':
     count = 0
     file_region_count = 0
-    with open('obs_20201021_2.csv') as csvfile:
+    with open('tl_20201022_3.csv') as csvfile:
         reader = csv.reader(csvfile, delimiter=' ')
         i = 0
         for row in reader:
