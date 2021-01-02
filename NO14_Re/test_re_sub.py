@@ -49,6 +49,31 @@ def simple_sub():
     str1 = re.sub('\s', repl, str1)
     print(str1)
 
+
+def update():
+    str1 = """
+boost 库的官网是 www.boost.org
+
+# 参考
+[1]KangRoger的 ec 读书笔记
+http://blog.csdn.net/kangroger/category_2771821.html ab"""
+    # file_path = '/Users/zxzx/writings/cpp_blog/[读书笔记][EffectiveC++]条款41-模板编程的隐式接口.md'
+    # with open(file_path, encoding='utf-8') as f:
+    #     str1 = f.read()
+    # str1 = " https://www.cnblogs.com/huxi/archive/2010/07/04/1771073.html . "
+    str1 += '\n'
+    # str1 = "abc abc"
+    ret = re.sub("[^\[]([https|http]+://[\.a-zA-Z\?/_0-9]+[^\s])", r'[\1](\1)', str1) # 不能以[开头, 因为这表示替换过的
+    # ret = re.sub('(\w.+)', r'\1\1', str1)
+    # ret = re.findall('(https://\w.+)', str1)
+    print(ret)
+
+
+
+
+
+
 if __name__ == '__main__':
     # test_what_is_re_sub_example2()
-    str1 = simple_sub()
+    # str1 = simple_sub()
+    update()

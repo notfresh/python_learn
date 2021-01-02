@@ -1,0 +1,89 @@
+# {{ moduleName }}
+
+{% if banner %}
+![banner]({{ bannerPath }})
+{% endif %}
+
+{%  if badge  %}
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+{% endif %}
+
+{% if badges %}
+TODO: Put more badges here.
+{% endif %}
+
+{{ description }}
+
+{% if longDescription %}
+TODO: Fill out this long description.
+{% endif %}
+
+## Table of Contents
+{% if security %}
+- [Security](#security)
+{% endif %}
+{% if background %}
+- [Background](#background)
+{% endif %}
+- [Install](#install)
+- [Usage](#usage)
+{% if API %}
+- [API](#api)
+{% endif %}
+{% if maintainers %}
+- [Maintainers](#maintainers)
+{% endif %}
+- [Contributing](#contributing)
+- [License](#license)
+
+{% if security %}
+## Security
+{% endif %}
+
+{% if background %}
+## Background
+{% endif %}
+
+## Install
+```
+```
+
+## Usage
+
+```
+```
+
+{% if API %}
+## API
+{% endif %}
+
+## Maintainers
+
+[@{{ maintainers }}](https://github.com/{{ maintainers }})
+
+## Contributing
+{% if contributingFile %}
+See [the contributing file](contributing.md)!
+{% endif %}
+
+{% if prs %}
+PRs accepted.
+{% endif %}
+
+Small note: If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
+
+## License
+
+{% if mit %}MIT{% endif %}
+{% if license %}
+  {{ license }}
+{% endif %}©
+{% if year %}
+    {{ zzz }}
+{% endif %}
+{% if diffYear %}
+{{ diffYear }}
+{% endif %}
+{{ licensee }}
+
+

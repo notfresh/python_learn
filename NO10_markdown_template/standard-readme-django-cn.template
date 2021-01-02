@@ -1,0 +1,89 @@
+# {{ moduleName }}
+
+{% if banner %}
+![banner]({{ bannerPath }})
+{% endif %}
+
+{%  if badge  %}
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+{% endif %}
+
+{% if badges %}
+TODO: Put more badges here.
+{% endif %}
+
+{{ description }}
+
+{% if longDescription %}
+TODO: Fill out this long description.
+{% endif %}
+
+## 目录
+{% if security %}
+- [安全](#安全)
+{% endif %}
+{% if background %}
+- [背景](#背景)
+{% endif %}
+- [Install](#install)
+- [Usage](#usage)
+{% if API %}
+- [API](#api)
+{% endif %}
+{% if maintainers %}
+- [Maintainers](#maintainers)
+{% endif %}
+- [Contributing](#contributing)
+- [License](#license)
+
+{% if security %}
+## Security
+{% endif %}
+
+{% if background %}
+## 背景
+{% endif %}
+
+## 安装
+```
+```
+
+## 用法
+
+```
+```
+
+{% if API %}
+## API
+{% endif %}
+
+## 维护者
+
+[@{{ maintainers }}](https://github.com/{{ maintainers }})
+
+## Contributing
+{% if contributingFile %}
+参见 [the contributing file](contributing.md)!
+{% endif %}
+
+{% if prs %}
+PRs accepted.
+{% endif %}
+
+提示: 如果编辑README, 请遵循 [standard-readme](https://github.com/RichardLitt/standard-readme) 的说明.
+
+## License
+
+{% if mit %}MIT{% endif %}
+{% if license %}
+  {{ license }}
+{% endif %}©
+{% if year %}
+    {{ zzz }}
+{% endif %}
+{% if diffYear %}
+{{ diffYear }}
+{% endif %}
+{{ licensee }}
+
+
